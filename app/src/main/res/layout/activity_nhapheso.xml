@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".Nhapheso">
+
+    <EditText
+        android:id="@+id/editTextA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hệ số a"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hệ số b"
+        android:layout_below="@+id/editTextA"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hệ số c"
+        android:layout_below="@+id/editTextB"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextC"
+        android:onClick="onSubmitClick"
+        android:text="Submit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giải phương trình bậc 2"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <TextView
+        android:id="@+id/textViewFormula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phương trình bậc 2:"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Kết quả công thức"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFormula" />
+
+    <Button
+        android:id="@+id/buttonInputCoefficients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onInputCoefficientsClick"
+        android:text="Nhập hệ số"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextResult"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <Button
+        android:id="@+id/buttonSolve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onSolveEquationClick"
+        android:text="Giải PT"
+        app:layout_constraintStart_toEndOf="@+id/buttonInputCoefficients"
+        app:layout_constraintTop_toBottomOf="@+id/editTextResult"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <Button
+        android:id="@+id/buttonClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCloseAppClick"
+        android:text="Đóng"
+        app:layout_constraintStart_toEndOf="@+id/buttonSolve"
+        app:layout_constraintTop_toBottomOf="@+id/editTextResult"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
